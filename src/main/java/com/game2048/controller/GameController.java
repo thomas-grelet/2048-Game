@@ -12,12 +12,15 @@ public class GameController {
 
   public GameController(GameView view, int size) {
     this.view = view;
+    if ((size < 2) || (size > 10)) {
+      size = 4;
+    }
     grid = new Grid(size);
   }
 
   public void startGame() {
     Direction direction;
-    view.displayGame();
+    view.displayGame(grid.getSize());
     grid.addRandomTile();
     grid.addRandomTile();
 

@@ -9,9 +9,11 @@ public class HeadlessView implements GameView {
   private Scanner clavier = new Scanner(System.in);
 
   @Override
-  public void displayGame() {
-    System.out.println("\n======= 2048-Game ======");
-  }
+  public void displayGame(int size) {
+    String separator = "=".repeat(2*size-1);
+    System.out.println("\n" + separator + " 2048-Game " + separator);
+    System.out.println("-> Size: " + size + "x" + size);
+}
 
   @Override
   public void displayGrid(int[][] cells, int size) {

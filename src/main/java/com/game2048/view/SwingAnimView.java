@@ -1,9 +1,11 @@
 package com.game2048.view;
 
+import com.game2048.model.Direction;
+
 public class SwingAnimView implements GameView {
 
   @Override
-  public void displayGame() {
+  public void displayGame(int size) {
     
   }
 
@@ -28,8 +30,8 @@ public class SwingAnimView implements GameView {
   }
 
   @Override
-  public String getAction() {
-    return "";
+  public Direction getDirection() {
+    return Direction.UP;
   }
     
 }
